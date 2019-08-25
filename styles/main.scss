@@ -1,0 +1,240 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.sign-up-form {
+  margin: 30px auto 0;
+  width: 427px;
+  border: 1px solid #ebedf8 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  input, select {
+    width: 347px;
+    outline: none;
+    border: none;
+    line-height: 24px;
+    font-size: 16px;
+  }
+
+  .sign-up-form-name {
+    padding-top: 21px;
+    padding-bottom: 4px;
+    color: #fafbfc;
+    border-bottom: solid 1px #9b9b9b;
+  }
+
+  .sign-up-form-email {
+    padding-top: 21px;
+    padding-bottom: 4px;
+    border-bottom: solid 1px #9b9b9b;
+  }
+
+  .sign-up-form-phone {
+    font-size: 16px;
+    height: 50px;
+    width:347px;
+    border-bottom: solid 1px #9b9b9b;
+    display: flex;
+    align-items: flex-end;
+    select {
+      font-size: 18px;
+      line-height: 24px;
+      outline: none;
+      border: none;
+      width: 65px;
+      overflow: hidden;
+    }
+    input {
+      font-size: 16px;
+      line-height: 24px;
+      width: calc(100% - 70px );
+    }
+  }
+
+  .sign-up-form-country {
+    padding-top: 21px;
+    padding-bottom: 4px;
+    border-bottom: solid 1px #9b9b9b;
+  }
+
+  h1 {
+    display: block;
+    margin:24px 0;
+    text-align: center;
+    font-size: 36px;
+    letter-spacing:0.26px;
+  }
+
+  .sign-up-form-pass {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      height: 50px;
+      border-bottom: solid 1px #9b9b9b;
+    }
+  }
+
+  .sign-up-form-recive {
+    display: flex;
+    position: relative;
+    width: 347px;
+    margin-top: 30px;
+
+    span{
+      width: calc(100% - 18px);
+    }
+    input {
+      border: solid 1px #9398a2;
+      background: #46b688;
+      width: 18px;
+      height: 18px;
+    }
+    input:checked {
+
+    }
+  }
+
+  button.sign-up-form-submit{
+    display: flex;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    width: 347px;
+    margin-top: 25px;
+    text-transform: uppercase;
+    border: none;
+    height: 42px;
+    background-color: #46b688;
+    color:#fff;
+    border-radius: 3px;
+  }
+
+  .sign-up-form-submit:hover{
+    background-color: #399f81;
+  }
+
+  .sign-up-form-submit:active{
+    background-color: #288077;
+  }
+
+  .sign-up-form-already {
+    width: 347px;
+    display: block;
+    font-size: 16px;
+    margin: 20px 0 30px;
+    letter-spacing: 0.2px;
+    a{
+      display: inline-block;
+      margin: 0 5px;
+      color: #0a7abf;
+      text-decoration: none;
+    }
+  }
+}
+
+.register_complete {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color:#419779;
+  border-radius: 4px;
+  border: solid 1px rgba(65, 151, 121, 0.3);
+  background-color: #e7f2ee;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 381px;
+  height: 64px;
+  .register_complete-close {
+    display: inline-block;
+  }
+  span {
+    font-size: 18px;
+    display: block;
+  }
+  span:nth-child(1){
+    font-weight: bold;
+    display: inline-block;
+    margin-left: -15px;
+  }
+
+  input[type='checkbox']{
+    width:15px;
+    height:15px;
+  }
+
+  .register_complete-close {
+    cursor: pointer;
+    position: absolute;
+    right: 27px;
+    top: 12px;
+    width: 15px;
+    height: 15px;
+
+  }
+  .register_complete-close:before, .register_complete-close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 15px;
+    width: 2px;
+    background-color: #318c67;
+  }
+  .register_complete-close:before {
+    transform: rotate(45deg);
+
+  }
+  .register_complete-close:after {
+    transform: rotate(-45deg);
+  }
+
+}
+
+.not-valid-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader {
+  border: 2px dotted #f3f3f3;
+  border-radius: 50%;
+
+  width: 24px;
+  height: 24px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-field-value {
+  width: 300px;
+  position: absolute;
+  z-index: 1000;
+  top: 20px;
+  right:50px;
+  color: palevioletred;
+  border: 1px solid palevioletred;
+  border-radius: 3px;
+  list-style: none;
+  li {
+    border-bottom:1px solid black;
+  }
+}
